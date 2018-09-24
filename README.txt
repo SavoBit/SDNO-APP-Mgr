@@ -77,3 +77,18 @@ docker build -t sdnapp .
 The WP3 App Catalogue service should be also up and running so that the Rabbit MQ to which the App Manager registers for events has been initialised. App Manager can thereafter be installed on karaf by copying the jar file in the deploy folder of karaf as already mentioned:
 220 | Active |  80 | 1.0  | com.cse.sdn.app.manager Blueprint Bundle
 Using a browser the App Manager endpoint is listed by the Karaf internal Jetty engine
+
+App Manager is further configured by a file SDNO.cfg file located in /opt/{apache karaf installation/etc/ with the following contents:
+
+SDN_CONTROLLER_TYPE = ODL
+SDN_CONTROLLER_IP = localhost
+SDN_CONTROLLER_USERNAME = karaf
+SDN_CONTROLLER_PASSWORD = karaf
+CATALOGUE_IP = 127.0.0.1
+CATALOGUE_USERNAME = selfnet
+CATALOGUE_PASSWORD = selfnet
+APPMGR_IP = 10.4.1.22
+VNFM_IP = 10.4.1.32
+
+
+
